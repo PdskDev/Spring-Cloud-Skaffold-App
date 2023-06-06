@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: spring-cloud-app
+  name: spring-cloud-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: spring-cloud-app
+  template:
+    metadata:
+      labels:
+        app: spring-cloud-app
+    spec:
+      containers:
+        - name: spring-cloud-app
+          image: docker.io/nadetdev/spring-cloud-app
