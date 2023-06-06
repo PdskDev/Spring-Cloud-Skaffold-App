@@ -14,5 +14,6 @@ public class HelloController {
             Model model){
         model.addAttribute("dev", dev);
         return "index";
+
     }
 }
